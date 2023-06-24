@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("home page");
+  res.send({ msg: "home page", name: process.env.NAME });
 });
 
 app.get("/blog", (req, res) => {
